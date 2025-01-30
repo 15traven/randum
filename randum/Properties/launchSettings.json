@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "randum (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "randum (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
