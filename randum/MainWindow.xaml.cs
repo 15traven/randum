@@ -39,12 +39,19 @@ namespace randum
             AppWindow.Resize(new Windows.Graphics.SizeInt32(300, 300));
         }
 
+        private void ValidateInput(TextBox sender, TextBoxBeforeTextChangingEventArgs args)
+        {
+            if (!System.Text.RegularExpressions.Regex.IsMatch(args.NewText, "^[0-9]*$"))
+            {
+                args.Cancel = true;
+            }
+        }
+
         private void GenerateRandomNumber(object sender, RoutedEventArgs e)
         {
             Random random = new Random();
 
-            if (int.TryParse(MinInput.Text, out int min) &&
-               int.TryParse(MaxInput.Text, out int max)) 
+            if (int.TryParse(MinInput.Text, out int min) && int.TryParse(MaxInput.Text, out int max)) 
             {
                 if (min < max)
                 {

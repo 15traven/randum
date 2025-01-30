@@ -30,8 +30,18 @@
             VerticalAlignment="Center"
             Width="200"
             Spacing="6">
-            <TextBox x:Name="MinInput" PlaceholderText="Min" Width="97" Text="0"/>
-            <TextBox x:Name="MaxInput" PlaceholderText="Max" Width="97" Text="100"/>
+            <TextBox 
+                x:Name="MinInput"
+                PlaceholderText="Min" 
+                Width="97" 
+                Text="0"
+                BeforeTextChanging="ValidateInput"/>
+            <TextBox 
+                x:Name="MaxInput" 
+                PlaceholderText="Max" 
+                Width="97" 
+                Text="100"
+                BeforeTextChanging="ValidateInput"/>
         </StackPanel>
         <Button 
             x:Name="Button" 
