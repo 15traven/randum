@@ -41,7 +41,17 @@ namespace randum
 
         private void GenerateRandomNumber(object sender, RoutedEventArgs e)
         {
-            ResultDisplay.Text = "15";
+            Random random = new Random();
+
+            if (int.TryParse(MinInput.Text, out int min) &&
+               int.TryParse(MaxInput.Text, out int max)) 
+            {
+                if (min < max)
+                {
+                    int randomNumber = random.Next(min, max + 1);
+                    ResultDisplay.Text = randomNumber.ToString();
+                }
+            }
         }
     }
 }
