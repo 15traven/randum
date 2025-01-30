@@ -13,7 +13,32 @@
         <MicaBackdrop />
     </Window.SystemBackdrop>
     
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button x:Name="myButton" Click="myButton_Click">Click Me</Button>
+    <StackPanel 
+        Orientation="Vertical" 
+        HorizontalAlignment="Center" 
+        VerticalAlignment="Center"
+        Spacing="12">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock 
+            x:Name="ResultDisplay" 
+            Text="0"
+            FontSize="64"/>
+        </StackPanel>
+        <StackPanel 
+            Orientation="Horizontal" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center"
+            Width="200"
+            Spacing="6">
+            <TextBox x:Name="MinInput" PlaceholderText="Min" Width="97" Text="0"/>
+            <TextBox x:Name="MaxInput" PlaceholderText="Max" Width="97" Text="100"/>
+        </StackPanel>
+        <Button 
+            x:Name="Button" 
+            Click="GenerateRandomNumber" 
+            Width="200" 
+            Style="{StaticResource AccentButtonStyle}">
+            Generate
+        </Button>
     </StackPanel>
 </Window>

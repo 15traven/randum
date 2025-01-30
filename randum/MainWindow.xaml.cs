@@ -39,9 +39,9 @@ namespace randum
             AppWindow.Resize(new Windows.Graphics.SizeInt32(300, 300));
         }
 
-        private void myButton_Click(object sender, RoutedEventArgs e)
+        private void GenerateRandomNumber(object sender, RoutedEventArgs e)
         {
-            myButton.Content = "Clicked";
+            ResultDisplay.Text = "15";
         }
     }
 }
